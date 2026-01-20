@@ -14,9 +14,16 @@
 # limitations under the License.
 #
 
-# FOD
-TARGET_HAS_FOD := true
-# NFC
+# Inherit some common device props
+WITH_GMS := true
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_DISABLE_EPPE := true
 TARGET_USES_NXP_NFC := true
 
 # Inherit device configuration
