@@ -36,7 +36,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 71106560
 BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 
 ## Camera
-$(call soong_config_set,samsungCameraVars,extra_ids,4,20,23,50,52,54)
+$(call soong_config_set_bool,samsungCameraVars,extra_ids,4,20,23,50,52,54)
 
 ## Vintf
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
@@ -47,7 +47,7 @@ include device/samsung/universal9611-common/fsconfig_dynamic.mk
 
 # UDFPS
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
-$(call soong_config_set,surfaceflinger,udfps_lib,//$(DEVICE_PATH):libudfps_extension.a51)
+$(call soong_config_set_bool,surfaceflinger,udfps_lib,//$(DEVICE_PATH):libudfps_extension.a51)
 
 ## SELinux
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
